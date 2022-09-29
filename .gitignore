@@ -1,0 +1,4 @@
+*.csv
+*.hash
+*.RData
+.DS_Store

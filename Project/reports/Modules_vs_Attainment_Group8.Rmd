@@ -1,0 +1,837 @@
+---
+title: "Module vs Attainment"
+author: Chinomnso Ekwedike
+output: html_notebook
+---
+
+
+The aim of this analysis is to discover if there is any correlation between Modules and the student Attainment.
+
+
+### __Prerequisites__
+Load the libraries
+```{r library, echo=TRUE}
+# load libraries
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(readr))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(ggvis))
+suppressPackageStartupMessages(library(plotrix))
+suppressPackageStartupMessages(library(patchwork))
+suppressPackageStartupMessages(library(knitr))
+```
+
+
+Load the data sets needed for the analysis.
+```{r load_data, echo=TRUE, warning=FALSE}
+# load data
+
+# load the student information data set
+s_info = read_csv("data/studentInfo.csv", show_col_types = FALSE)
+
+# load the courses data set
+courses = read_csv("data/courses.csv", show_col_types = FALSE)
+
+# load the student registration data set
+student_Reg = read_csv("data/studentRegistration.csv", show_col_types = FALSE)
+
+# load the assessments data set
+assessments = read_csv("data/assessments.csv", show_col_types = FALSE)
+
+# load the student assessment data set
+student_Assessment = read_csv("data/studentAssessment.csv", show_col_types = FALSE)
+
+# load the student VLE data set
+student_Vle = read_csv("data/studentVle.csv", show_col_types = FALSE)
+
+# load the VLE data set
+vle = read_csv("data/vle.csv", show_col_types = FALSE)
+```
+
+
+
+### __Exploratory Data Analysis__
+
+Check the dimension of each data set. Also check for any missing rows
+```{r dimensions, echo=TRUE}
+
+# create a list of the tables 
+Datasets = c("Student_Info", "Courses", "Student_Reg", "Assessments", "Student_Assess", "Student_Vle", "Vle")
+
+# create a list containing the number of rows contained in each table
+Rows = c(nrow(s_info), nrow(courses), nrow(student_Reg), nrow(assessments), nrow(student_Assessment), nrow(student_Vle), nrow(vle))
+
+# create a list containing the number of columns contained in each table
+Columns = c(ncol(s_info), ncol(courses), ncol(student_Reg), ncol(assessments), ncol(student_Assessment), ncol(student_Vle), ncol(vle))
+
+# create a list for missing rows/observations
+Missing_rows = c(any(is.na(s_info)), any(is.na(courses)), any(is.na(student_Reg)), any(is.na(assessments)), any(is.na(student_Assessment)), any(is.na(student_Vle)), any(is.na(vle)))
+
+# create a data frame containing the lists of values
+df =  data.frame(Datasets, Rows, Columns, Missing_rows)
+
+# display the data frame as a Knitr table
+kable(df, caption = "Summary of Data Set Dimensions")
+```
+
+
+```{r student_Info}
+# print the first few rows of the student information data set
+kable(head(s_info, 5))
+```
+
+
+```{r courses}
+# print the first few rows of the courses data set
+kable(head(courses, 5))
+```
+
+
+```{r student_Reg}
+# print the first few rows of the student information data set
+kable(head(student_Reg, 5))
+```
+
+
+```{r assessments}
+# print the first few rows of the student information data set
+kable(head(assessments, 5))
+```
+
+
+```{r student_Assessment}
+# print the first few rows of the student information data set
+kable(head(student_Assessment, 5))
+```
+
+
+```{r student_Vle}
+# print the first few rows of the student information data set
+kable(head(student_Vle, 5))
+```
+
+```{r vle}
+# print the first few rows of the student information data set
+kable(head(vle, 5))
+```
+
+The different data sets are not balanced given that among the seven module codes used, three(`AAA`, `BBB` and `GGG`) Social Sciences while the remaining four (`CCCC`, `DDD`, `EEE` and `FFF`) represent STEM. This increases the likelihood of the results of the data analysis being in favour of STEM, where population is considered.
+
+
+### __Data Preparation__
+Remove any missing rows from data sets.  Also, remove demographic information from the student information data set as they are out of scope for this project.
+
+```{r no_demographics, echo=TRUE}
+ # remove the columns containing the demographic data from the student information data 
+  # set as they are out of scope for this project
+student_Info =  s_info %>% select(everything(), -gender, -region, -highest_education, -imd_band, -age_band)
+```
+
+
+```{r preparation, echo=TRUE, ref.label=c("no_demographics")}
+
+  # remove any missing rows from the student information data set
+  st_inf = na.omit(student_Info)
+  
+  # remove any missing rows from the courses data set
+ course = na.omit(courses)
+  
+  # remove any missing rows from the student registration data set
+  st_reg = na.omit(student_Reg)
+  
+  # remove any missing rows from the assessments data set
+  assess = na.omit(assessments)
+  
+  # remove any missing rows from the student assessment data set
+  st_ass = na.omit(student_Assessment)
+  
+  # remove any missing rows from the student VLE data set
+  st_vle = na.omit(student_Vle)
+  
+  # remove any missing rows from the VLE data set
+  v_le = na.omit(vle)
+```
+
+
+```{r after_prep, echo=TRUE}
+
+
+# create a list containing the number of rows contained in each table
+New_Rows = c(nrow(st_inf), nrow(course), nrow(st_reg), nrow(assess), nrow(st_ass), nrow(st_vle), nrow(v_le))
+
+# create a list containing the number of columns contained in each table
+New_Columns = c(ncol(st_inf), ncol(course), ncol(st_reg), ncol(assess), ncol(st_ass), ncol(st_vle), ncol(v_le))
+
+# create a list for missing rows/observations
+New_Missing_Rows = c(any(is.na(st_inf)), any(is.na(course)), any(is.na(st_reg)), any(is.na(assess)), any(is.na(st_ass)), any(is.na(st_vle)), any(is.na(v_le)))
+
+# create a data frame containing the lists of values
+new_df =  data.frame(Datasets, New_Rows, New_Columns, New_Missing_Rows)
+
+# display the data frame as a Knitr table
+kable(new_df, caption = "New Summary of Data Set Dimensions after Data Preparation")
+```
+
+Print out the first few rows of the student information data set.
+
+```{r new_student_info, ref.label=c("no_demographics")}
+kable(head(st_inf))
+```
+
+
+
+### __Data Analysis__
+
+##### __A.    Social Sciences vs STEM__
+
+This section compares student attainment in Social Sciences versus that of STEM using the `student information`.
+
+
+Compute the total number rows for the student information data set
+```{r total, echo=TRUE}
+student_total = st_inf %>% count()
+student_total$n
+```
+
+Compute the number of students in each category of the final result.
+```{r number, echo=TRUE}
+student_result_number = table(st_inf$final_result)
+student_result_number
+```
+
+
+Compute and summarise the proportion/ distribution of each category of the final results.
+```{r proportion, echo=TRUE}
+total_result_percentage = round(prop.table(table(st_inf$final_result)) * 100, 1)
+cbind(Results = table(st_inf$final_result), Percentage = total_result_percentage)
+```
+
+
+Display the proportions on a pie chart.
+```{r full_pie, echo=TRUE}
+# display the proportions on a pie chart
+pie3D(student_result_number, labels = total_result_percentage, explode = 0.1, main = "Student Information Final Result Distribution", col = rainbow(4))
+legend("topleft", c("Distinction", "Fail", "Pass", "Withdrawn"), cex = 0.8,
+       fill = rainbow(4))
+```
+
+
+Display the different categories of final result for the full student information data set on a bar chart.
+
+
+```{r full_result_bar, echo=TRUE, fig.align='center'}
+# plot a bar chart showing the different results
+st_inf %>% ggvis(~final_result, fill = ~final_result) %>% layer_bars()
+```
+
+
+Starting with the Social Sciences modules
+Social sciences have `AAA`, `BBB` and `GGG` as codes for their modules
+```{r social_sciences, echo=TRUE}
+# select the rows with the social sciences module codes
+social_sciences = st_inf %>% select(everything()) %>% filter(code_module == "AAA" | code_module == "BBB" | code_module == "GGG")
+```
+
+
+Compute the total number of students in the Social Sciences
+```{r soc_sci_students, echo=TRUE}
+ss_count = social_sciences %>% count()
+ss_count$n
+```
+
+Compute the percentage of Social Science students
+```{r ss_percent, echo=TRUE}
+ss_percent = round((ss_count$n / student_total$n) * 100, 1)
+paste(ss_percent,"%")
+```
+
+
+Computing the number of each category of the final result
+```{r final_result, echo=TRUE,ref.label=c("social_sciences")}
+result = table(social_sciences$final_result)
+result
+```
+
+
+Compute and summarise the proportion/ distribution of each category of the final results for the Social Sciences.
+```{r soc_sci_proportion, echo=TRUE}
+soc_sci_perc = round(prop.table(table(social_sciences$final_result)) * 100, 1)
+cbind(Results = table(social_sciences$final_result), Percentage = soc_sci_perc)
+```
+
+
+
+Display the proportions on a pie chart.
+```{r soc_sci_pie, echo=TRUE}
+# display the proportions on a pie chart
+pie3D(result, labels = soc_sci_perc, explode = 0.1, main = "Social Sciences Final Result Distribution", col = rainbow(4))
+legend("topleft", c("Distinction", "Fail", "Pass", "Withdrawn"), cex = 0.8,
+   fill = rainbow(4))
+```
+
+Display the number of each category of the final result in a bar chart.
+```{r result_bar, echo=TRUE, fig.align='center'}
+# plot a bar chart showing the different results
+social_sciences %>% ggvis(~final_result, fill = ~final_result) %>% layer_bars()
+```
+
+
+Then unto the STEM modules.
+Social sciences have `CCC`, `DDD`, `EEE` and `FFF` as codes for their modules
+```{r stem, echo=TRUE}
+stem = st_inf %>% select(everything()) %>% filter(code_module == "CCC" | code_module == "DDD" | code_module == "EEE" | code_module == "FFF")
+```
+
+
+Compute the total number of students in the Social Sciences
+```{r stem_students, echo=TRUE}
+stem_count = stem %>% count()
+stem_count$n
+```
+
+Compute the percentage of STEM student
+```{r stem_percent, echo=TRUE}
+stem_percent = round((stem_count$n / student_total$n) * 100, 1)
+paste(stem_percent,"%")
+```
+
+```{r stem_result}
+stem_result = table(stem$final_result)
+stem_result
+```
+
+
+Compute and summarise the proportion/ distribution of each category of the final results for STEM.
+```{r stem_proportion, echo=TRUE}
+stem_std_perc = round(prop.table(table(stem$final_result)) * 100, 1)
+cbind(Results = table(stem$final_result), Percentage = stem_std_perc)
+```
+
+
+Display the proportions on a pie chart.
+```{r stem_pie, echo=TRUE}
+# display the proportions on a pie chart
+pie3D(stem_result, labels = stem_std_perc, explode = 0.1, main = "Stem Final Result Distribution", col = rainbow(4))
+legend("topleft", c("Distinction", "Fail", "Pass", "Withdrawn"), cex = 0.8,
+       fill = rainbow(4))
+```
+
+Display the number of the different categories in a bar chart.
+```{r stem_result_bar, echo=TRUE, fig.align='center'}
+# plot a bar chart showing the different results
+stem %>% ggvis(~final_result, fill = ~final_result) %>% layer_bars()
+```
+
+```{r summary_results, echo=TRUE}
+# Create a table of summary of the findings
+Modules = c("Full_Data", "Social_Sciences", "Stem")                       
+Distinction = c(3024, 1117, 1907)
+Fail = c(7052, 2586, 4466)
+Pass = c(12361, 4682, 7679)
+Withdrawn = c(10156, 2806, 7350)                      
+Total = c(student_total$n, ss_count$n, stem_count$n)
+Percentage_of_Total = c(100.0, 34.3, 65.7)
+sum_df = data.frame(Modules, Distinction, Fail, Pass, Withdrawn, Total, Percentage_of_Total)
+kable(sum_df)
+```
+
+__Summary of Results:__
+
+- Out of 32593, 21402 (65.7%) were STEM students while 11191 (34.3%) were Social Science students.
+- In each category of results, STEM students had the highest number compared to Social Science students.
+- In Distinction, Fail, Pass and Withdrawn, Social Sciences had the lower population of students with a value of 1117 (10.0%), 2586 (23.1), 4682 (41.8%) and 2806 (25.1%) respectively.
+- In Distinction, Fail, Pass and Withdrawn, STEM had a higher population of students with a value of 1907 (8.9%), 4466 (20.9), 7679 (35.9%) and 7350 (34.3%).
+- Within the student population for both courses, the students with a pass (result) had the highest percentage, followed by those who withdrew, failed and had a distinction accordingly. This follows a similar order of distribution found in the full data set.
+
+
+
+
+##### __B.    Social Sciences vs STEM Based on Months__
+
+This section covers a comparison of Social Sciences and STEM based on the months. This uses the `student information` data set.
+
+Starting with the full data set
+```{r full_months}
+full_months = table(st_inf$code_presentation)
+full_months
+```
+
+
+Compute and summarise the proportion/ distribution of the different presentations.
+```{r pre_proportion, echo=TRUE}
+present_perc = round(prop.table(table(st_inf$code_presentation)) * 100, 1)
+cbind(Presentation = table(st_inf$code_presentation), Percentage = present_perc)
+```
+
+
+Display the proportions on a pie chart. 
+
+```{r presentation_pie}
+# display the proportions on a pie chart
+#pie(result, col = rainbow(4))
+pie3D(full_months, labels = present_perc, explode = 0.1, main = "Full Presentations Distribution", col = rainbow(4))
+legend("topright", c("2013B", "2013J", "2014B", "2014J"), cex = 0.8, fill = rainbow(4))
+```
+
+Display the presentations on a bar chart.
+```{r present_bar, echo=TRUE, fig.align='center'}
+# plot a bar chart showing the different results
+st_inf %>% ggvis(~code_presentation, fill = ~code_presentation) %>% layer_bars()
+```
+
+
+Compute the distribution of the different presentations for Social Sciences
+```{r ss_months, echo=TRUE}
+ss_months = table(social_sciences$code_presentation)
+ss_months
+```
+
+
+Compute and summarise the proportion/ distribution of each presentation.
+```{r ss_pre, echo=TRUE}
+total_ss_percentage = round(prop.table(table(social_sciences$code_presentation)) * 100, 1)
+cbind(Presentation = table(social_sciences$code_presentation), Percentage = total_ss_percentage)
+```
+
+
+Display the results on a pie chart.
+```{r presentation_ss_pie}
+# display the proportions on a pie chart
+#pie(result, col = rainbow(4))
+pie3D(ss_months, labels = total_ss_percentage, explode = 0.1, main = "Presentations Distribution for Social Sciences", col = rainbow(4))
+legend("topright", c("2013B", "2013J", "2014B", "2014J"), cex = 0.8, fill = rainbow(4))
+```
+
+Display the number of each presentation on a bar chart.
+```{r pres_bar, echo=TRUE, fig.align='center'}
+# plot a bar chart showing the different results
+social_sciences %>% ggvis(~code_presentation, fill = ~code_presentation) %>% layer_bars()
+```
+
+
+Compute the proportion of the final results for each month and year (presentation) for Social Sciences. 
+
+Starting with February 2013
+```{r for_2013B, echo=TRUE}
+feb_2013 =  social_sciences %>% select(everything()) %>% filter(code_presentation == "2013B")
+ss_2013B = table(feb_2013$final_result)
+ss_2013B
+```
+
+
+Compute and summarise the proportion/ distribution of each category of the final results for each presentation.
+```{r proportion_2013B, echo=TRUE}
+result_2013_percentage = round(prop.table(table(feb_2013$final_result)) * 100, 1)
+cbind(Presentation = table(feb_2013$final_result), Percentage = result_2013_percentage)
+```
+
+
+Display the proportions on a pie chart.
+
+```{r pre_2013B_pie}
+# display the proportions on a pie chart
+pie3D(ss_2013B, labels = result_2013_percentage, explode = 0.1, main = "February 2013 Social Sciences Final Result Distribution", col = rainbow(4))
+legend("topright", c("Distinction", "Fail", "Pass", "Withdrawn"), cex = 0.8, fill = rainbow(4))
+```
+
+Display the numbers on a bar chart.
+```{r result_bar_2013B, echo=TRUE, fig.align='center'}
+# plot a bar chart showing the different results
+feb_2013 %>% ggvis(~final_result, fill = ~final_result) %>% layer_bars()
+```
+
+
+
+October 2013
+```{r for_2013J, echo=TRUE}
+oct_2013 =  social_sciences %>% select(everything()) %>% filter(code_presentation == "2013J")
+count_2013J = table(oct_2013$final_result)
+count_2013J
+```
+
+
+Compute and summarise the proportion/ distribution of each category of the final results for each presentation.
+```{r proportion_2013J_p, echo=TRUE}
+result_2013J_percentage = round(prop.table(table(oct_2013$final_result)) * 100, 1)
+cbind(Presentation = table(oct_2013$final_result), Percentage = result_2013J_percentage)
+```
+
+
+Display the proportions on a pie chart.
+
+```{r pre_2013J_pie}
+# display the proportions on a pie chart
+pie3D(count_2013J, labels = result_2013J_percentage, explode = 0.1, main = "October 2013 Social Sciences Final Result Distribution", col = rainbow(4))
+legend("topleft", c("Distinction", "Fail", "Pass", "Withdrawn"), cex = 0.8, fill = rainbow(4))
+```
+
+Display the numbers on a bar chart.
+```{r result_bar_2013B_s, echo=TRUE, fig.align='center'}
+# plot a bar chart showing the different results
+oct_2013 %>% ggvis(~final_result, fill = ~final_result) %>% layer_bars()
+```
+
+
+February 2014
+```{r for_2014B, echo=TRUE}
+feb_2014 =  social_sciences %>% select(everything()) %>% filter(code_presentation == "2014B")
+ss_2014B = table(feb_2014$final_result)
+ss_2014B
+```
+
+
+Compute and summarise the proportion/ distribution of each category of the final results.
+```{r proportion_2014B, echo=TRUE}
+total_2014B_percentage = round(prop.table(table(feb_2014$final_result)) * 100, 1)
+cbind(Presentation = table(feb_2014$final_result), Percentage = total_2014B_percentage)
+```
+
+
+Compute and summarise the proportion/ distribution of each category of the final results.
+
+```{r pre_2014B_pie}
+# display the proportions on a pie chart
+pie3D(ss_2014B, labels = total_2014B_percentage, explode = 0.1, main = "February 2014 Social Sciences Final Result Distribution", col = rainbow(4))
+legend("topright", c("Distinction", "Fail", "Pass", "Withdrawn"), cex = 0.8, fill = rainbow(4))
+```
+
+
+Display the numbers on a bar chart.
+```{r result_bar_2014B_s, echo=TRUE, fig.align='center'}
+# plot a bar chart showing the different results
+feb_2014 %>% ggvis(~final_result, fill = ~final_result) %>% layer_bars()
+```
+
+
+October 2014
+```{r for_2014J, echo=TRUE}
+oct_2014 =  social_sciences %>% select(everything()) %>% filter(code_presentation == "2014J")
+ss_2014J_count = table(oct_2014$final_result)
+ss_2014J_count
+```
+
+
+Compute and summarise the proportion/ distribution of each category of the final results.
+```{r proportion_2014J, echo=TRUE}
+total_2014J_percentage_ss = round(prop.table(table(oct_2014$final_result)) * 100, 1)
+cbind(Presentation = table(oct_2014$final_result), Percentage = total_2014J_percentage_ss)
+```
+
+
+Display the proportions on a pie chart.
+```{r prop_2014J_pie, echo=TRUE}
+# display the proportions on a pie chart
+pie3D(ss_2014J_count, labels = total_2014J_percentage_ss, explode = 0.1, main = "October 2014 Social Sciences Final Result Distribution", col = rainbow(4))
+legend("topleft", c("Distinction", "Fail", "Pass", "Withdrawn"), cex = 0.8, fill = rainbow(4))
+```
+
+Display the numbers on a bar chart.
+```{r result_bar_2014J_s, echo=TRUE, fig.align='center'}
+# plot a bar chart showing the different results
+oct_2014 %>% ggvis(~final_result, fill = ~final_result) %>% layer_bars()
+```
+
+
+Compute the proportion of the final results for each  final results for each month and year for STEM.
+
+Compute the number of students within each category of the final results for STEM
+```{r stem_full, echo=TRUE}
+stem_months = table(stem$code_presentation)
+stem_months
+```
+
+
+Compute and summarise the proportion/ distribution for STEM
+
+```{r stem_prop, echo=TRUE}
+total_stem_percentage = round(prop.table(table(stem$code_presentation)) * 100, 1)
+cbind(Presentation = table(stem$code_presentation), Percentage = total_stem_percentage)
+```
+
+
+Display the proportions on a pie chart.
+```{r prop_stem_pie, echo=TRUE}
+# display the proportions on a pie chart
+pie3D(stem_months, labels = total_stem_percentage, explode = 0.1, main = "Presentations Distribution for STEM", col = rainbow(4))
+legend("topright", c("2013B", "2013J", "2014B", "2014J"), cex = 0.8, fill = rainbow(4))
+```
+
+Display the number of each presentation on a bar chart.
+
+```{r stem_bar, echo=TRUE}
+# plot a bar chart showing the different results
+stem %>% ggvis(~code_presentation, fill = ~code_presentation) %>% layer_bars()
+```
+
+
+
+Starting with February 2013
+```{r for_2013B_stem, echo=TRUE}
+feb_2013_stem =  stem %>% select(everything()) %>% filter(code_presentation == "2013B")
+feb_stem_13 = table(feb_2013_stem$final_result)
+feb_stem_13
+```
+
+
+Compute and summarise the proportion/ distribution of each category of the final results.
+```{r proportion_stem, echo=TRUE}
+total_result2013B_perc = round(prop.table(table(feb_2013_stem$final_result)) * 100, 1)
+cbind(Presentation = table(feb_2013_stem$final_result), Percentage = total_result2013B_perc)
+```
+
+
+Display the proportions on a pie chart.
+```{r stem_13B, echo=TRUE}
+# display the proportions on a pie chart
+pie3D(feb_stem_13, labels = total_result2013B_perc, explode = 0.1, main = "February 2013 Stem Final Result Distribution", col = rainbow(4))
+legend("topleft", c("Distinction", "Fail", "Pass", "Withdrawn"), cex = 0.8, fill = rainbow(4))
+```
+
+Display the results on a bar chart.
+```{r stem_2013B}
+# plot a bar chart showing the different results
+feb_2013_stem %>% ggvis(~final_result, fill = ~final_result) %>% layer_bars()
+```
+
+
+
+October 2013
+```{r for_2013J_stem, echo=TRUE}
+oct_2013_stem =  stem %>% select(everything()) %>% filter(code_presentation == "2013J")
+stem_2013J = table(oct_2013_stem$final_result)
+stem_2013J
+```
+
+
+Compute the proportion of each category of final result
+
+```{r stem_oct_13, echo=TRUE}
+total_stem2013J_perc = round(prop.table(table(oct_2013_stem$final_result)) * 100, 1)
+cbind(Presentation = table(oct_2013_stem$final_result), Percentage = total_stem2013J_perc)
+```
+
+Display a pie chart showing the different proportions.
+```{r stem_2013_pie, echo=TRUE}
+# display the proportions on a pie chart
+pie3D(stem_2013J, labels = total_stem2013J_perc, explode = 0.1, main = "October 2013 Stem Final Result Distribution", col = rainbow(4))
+legend("topleft", c("Distinction", "Fail", "Pass", "Withdrawn"), cex = 0.8, fill = rainbow(4))
+```
+
+Display the results on a bar chart.
+```{r stem_2014J}
+# plot a bar chart showing the different results
+oct_2013_stem %>% ggvis(~final_result, fill = ~final_result) %>% layer_bars()
+```
+
+
+February 2014
+```{r for_2014B_stem, echo=TRUE}
+feb_2014_stem =  stem %>% select(everything()) %>% filter(code_presentation == "2014B")
+stem_2014B = table(feb_2014_stem$final_result)
+stem_2014B
+```
+
+
+Compute the proportion of each category of final result
+```{r stem_2014B, echo=TRUE}
+total_stem2014B_perc = round(prop.table(table(feb_2014_stem$final_result)) * 100, 1)
+cbind(Presentation = table(feb_2014_stem$final_result), Percentage = total_stem2014B_perc)
+```
+
+
+Display a pie chart showing the different proportions
+```{r stem_2014B_pie, echo=TRUE}
+# display the proportions on a pie chart
+pie3D(stem_2014B, labels = total_stem2014B_perc, explode = 0.1, main = "February 2014 Stem Final Result Distribution", col = rainbow(4))
+legend("topleft", c("Distinction", "Fail", "Pass", "Withdrawn"), cex = 0.8, fill = rainbow(4))
+```
+
+Display the results on a bar chart.
+```{r stem_2014B_bar, echo=TRUE}
+# plot a bar chart showing the different results
+feb_2014_stem %>% ggvis(~final_result, fill = ~final_result) %>% layer_bars()
+```
+
+
+
+October 2014
+```{r for_2014J_stem, echo=TRUE}
+oct_2014_stem =  stem %>% select(everything()) %>% filter(code_presentation == "2014J")
+stem_2014J = table(oct_2014_stem$final_result)
+stem_2014J
+```
+
+
+Compute the proportion of each category of final result.
+```{r prop_2014B, echo=TRUE}
+total_stem2014J_perc = round(prop.table(table(oct_2014_stem$final_result)) * 100, 1)
+cbind(Presentation = table(oct_2014_stem$final_result), Percentage = total_stem2014J_perc)
+```
+
+
+Display a pie chart showing the different proportions
+```{r stem_2014J_pie, echo=TRUE}
+# display the proportions on a pie chart
+pie3D(stem_2014J, labels = total_stem2014J_perc, explode = 0.1, main = "October 2014 Stem Final Result Distribution", col = rainbow(4))
+legend("topleft", c("Distinction", "Fail", "Pass", "Withdrawn"), cex = 0.8, fill = rainbow(4))
+```
+
+Display the results on a bar chart.
+```{r oct_2014_bar, echo=TRUE}
+# plot a bar chart showing the different results
+oct_2014_stem %>% ggvis(~final_result, fill = ~final_result) %>% layer_bars()
+```
+
+
+
+Summary of the months and years for the Social Sciences and Stem
+```{r ss_month_summary, echo=TRUE}
+SS_Month_Yr = c("February-2013", "October-2013", "February-2014", "October-2014")
+Id = c("2013B",  "2013J",  "2014B", "2014J")
+SS_Distiction = c(155, 337, 294, 331)
+SS_Fail = c(459, 860, 651, 616)
+SS_Pass = c(648, 1650, 911, 1518)
+SS_Withdrawn = c(505, 770, 590, 941)
+Stem_Distinction = c(172, 412, 490, 833)
+Stem_Fail = c(782, 1141, 1182, 1361)
+Stem_Pass = c(1120, 2121, 1663, 2775)
+Stem_Withdrawn = c(843, 1599, 2023, 2885)
+
+# create a data frame containing the lists
+month_yr_summary = data.frame(SS_Month_Yr, Id, SS_Distiction, SS_Fail, SS_Pass, SS_Withdrawn, Stem_Distinction, Stem_Fail, Stem_Pass, Stem_Withdrawn)
+kable(month_yr_summary, caption = "Summary of the students attainment in each module based on month and year")
+```
+
+
+
+Create a summary of the findings based on the month and years
+```{r months_summary, echo =TRUE}
+Month_Year = c("February-2013", "October-2013", "February-2014", "October-2014")
+Id = c("2013B",  "2013J",  "2014B", "2014J")
+Full_Data = c(4684, 8845, 7804, 11260)
+Social_Sciences = c(1767, 3572, 2446, 3406)
+Stem = c(2917, 5273, 5358, 7854)
+m_df = data.frame(Month_Year, Id, Full_Data, Social_Sciences, Stem)
+
+# add percentage for each month
+months_df = m_df %>% select(everything()) %>% mutate(Soc_Sci_Perc = round((Social_Sciences / Full_Data) * 100, 1), Stem_Perc = round((Stem / Full_Data) * 100, 1))
+kable(months_df)
+```
+
+__Summary of Results:__ 
+
+- In the full data set, the month of October has the highest number of students for both 2013 and 2014. 
+- February has the lowest number of students.
+- Social sciences and STEM both had their lowest number of learners in February 2013.
+- STEM showed a steady increase in number of students from February 2013 to October 2014.
+- The number Social Sciences students showed some fluctuation, with an initial increase in October 2013, a decrease in February 2014 and an increase in October 2014.
+- For both months and years, STEM students consistently accounted for over 50% of the learning population.
+- In all categories of the final results, STEM consistently had the highest number of learners.
+
+
+
+
+##### __C.    Social Sciences vs Stem based on Average Module Presentation Length__
+
+This section covers an exploratory data analysis into the module presentation length in an attempt to understand the differences in the final results obtained by the students. This uses the `courses` data set.
+
+Compute the average length of the individual modules contained in both the Social Sciences and STEM.
+```{r ss_stem_course, echo=TRUE}
+ss_courses = course %>% select(code_module, module_presentation_length) %>% group_by(code_module) %>% summarise(Average_Module_Length = round(mean(module_presentation_length)))
+kable(ss_courses, caption = "Average Presentation Length of Each Module")
+```
+
+Display the average length of the modules on a bar chart.
+```{r average_bar, echo=TRUE, fig.align='center', warning=FALSE}
+# plot a bar chart showing the different results
+ss_courses %>% ggvis(~code_module, ~Average_Module_Length, fill = ~code_module) %>% layer_bars()
+```
+
+
+Compute the average length of the module for Social Sciences
+```{r ave_ss, echo=TRUE}
+ss_mod_length = ss_courses %>% select(everything()) %>% filter(code_module == "AAA" | code_module == "BBB" | code_module == "GGG")
+
+# compute the average
+round(mean(ss_mod_length$Average_Module_Length))
+```
+
+
+Compute the average length of the module for STEM
+```{r ave_stem, echo=TRUE}
+stem_mod_length = ss_courses %>% select(everything()) %>% filter(code_module == "CCC" | code_module == "DDD" | code_module == "EEE" | code_module == "FFF")
+
+# compute the average
+round(mean(stem_mod_length$Average_Module_Length))
+```
+
+
+Compute the average module presentation length of the Social Sciences based on the individual models and the code presentation (months and years).
+```{r ss_stem_course_month_yr, echo=TRUE}
+ss_cours = course %>% select(everything()) %>% group_by(code_module, code_presentation) %>% summarise(Average_Module_Length = round(mean(module_presentation_length)))
+kable(ss_cours, caption = "Average Presentation Length of Each Module")
+```
+
+
+__Summary of Results:__
+
+- Social Science modules, on average, last longer than STEM modules.
+- While Social Sciences lasted for an average of 259 days, while stem lasted for an average of 255 days.
+- For both Social Sciences and STEM, the October starts had a length of 260 days on average, while the February starts had a length of 240 days on average.
+
+
+
+
+#### __D.   Social Sciences vs Stem Based on Student VLE__
+
+This section explores student engagement with virtual learning for Social Sciences and STEM based on the number of clicks. This uses the `student VLE` data set.
+
+Group the student VLE data by the module codes and add up the number of clicks for each module code.
+```{r student_vle, echo=TRUE}
+stdt_vle = st_vle %>% select(code_module, sum_click) %>% group_by(code_module) %>% summarise(sum_of_clicks = sum(sum_click))
+
+# display the table containing the aggregate data
+kable(stdt_vle, caption = "Aggregate of the Modules and the sum of clicks for each module")
+```
+
+
+Display the number of clicks for each bar module on a bar chart.
+
+```{r click_bar, echo=TRUE, fig.align='center', warning=FALSE}
+# plot a bar chart showing the different results
+stdt_vle %>% ggvis(~code_module, ~sum_of_clicks, fill = ~code_module) %>% layer_bars()
+```
+
+
+
+Compute the total number of clicks for Social Sciences
+```{r ss_clicks, echo=TRUE}
+ss_clicks =  stdt_vle %>% select(everything()) %>% filter(code_module == "AAA" | code_module == "BBB" | code_module == "GGG") %>% summarise(Total_Clicks_for_Social_Sciences = sum(sum_of_clicks))
+kable(ss_clicks)
+```
+
+
+
+Compute the total number of clicks for STEM
+```{r stem_clicks, echo=TRUE}
+stem_clicks =  stdt_vle %>% select(everything()) %>% filter(code_module == "CCC" | code_module == "DDD" | code_module == "EEE" | code_module == "FFF") %>% summarise(Total_Clicks_for_STEM = sum(sum_of_clicks))
+kable(stem_clicks)
+```
+
+__Summary of Results:__
+
+- Total number of clicks recorded is 39,605,099.
+- STEM students have higher engagement with OU Virtual Learning (with a total number of clicks =  31,790,387) 
+- STEM students account for approximately 80% (`(31790387 / 39605099) * 100`)of the total student engagement.
+- Social Science students had a total of 7,814,712 clicks; a lower number compared to STEM.
+- Social Science students account for only 20% (`(7814712 / 39605099) * 100`) of the total student engagement.
+- STEM students are more likely to engage with OU virtual learning that Social Science students.
+
+
+Given that the data sets favour STEM in terms of population, this makes it difficult to draw any useful conclusion in terms of the impact of the modules on the final result/ attainment of the students. There does not seem to be any evidence of module being correlated with their final result, as level of comprehension vary among individuals. There is no data on students' feedback and the reason students withdraw from studying. This would have helped shed more light, from the students' perspective, on specific areas of the different modules that may potentially have an impact on the learner's performance and potentially have an impact on their final result. 
+
+Having a balanced data set would have been advantageous in terms of drawing a useful conclusion, although this will also be impacted by the specific samples chosen.
+
+The higher level engagement (number of clicks), registered among the STEM students can be traceable to having a higher number of learners compared to that of Social Sciences. Although a 80% to 20% ratio does show a higher engagement by STEM students.
+
+

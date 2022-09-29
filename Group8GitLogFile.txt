@@ -1,0 +1,1344 @@
+commit 9ad71acb3f4022fe49c21c0e9d6f050a8a7c9638
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Fri Mar 25 12:17:04 2022 +0000
+
+    Tidied up the repository and updated README
+
+commit 652e8f0fac965dda7922196c1c4c370328cce2ea
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 24 23:39:06 2022 +0000
+
+    Modified README and global.dcf
+
+commit e1ba2c4f0fa9396f8b5b9644ec071cc48b2c6999
+Merge: dc9b739 1d4ee9f
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 24 15:29:45 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit dc9b7390a0a97ecd25ed3842de9386bb944b952c
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 24 15:29:41 2022 +0000
+
+    Updated README.txt, moved activity_type.R to munge folder and modified some codes
+
+commit 1d4ee9f373da1f215325cb12336bef36ed0f0080
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Thu Mar 24 15:14:13 2022 +0000
+
+    85.07%_Gradient Boosted_Confusion Matrix
+
+commit cf935073d4391e4d0def0bba7baf7c3a630157ac
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Thu Mar 24 15:12:30 2022 +0000
+
+    update the Final ROC Curve of random forest, decision tree, gradient boosted, tree ensemble
+
+commit 604f00638d348304362d4599f10da14924800258
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Thu Mar 24 15:11:10 2022 +0000
+
+    Revise Final_classifier_workflow_KNIME
+
+commit 72bf9130703414257ed23458d9155995a4fdbdd2
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Thu Mar 24 14:04:11 2022 +0000
+
+    revise power bi format in page 3
+
+commit b3c66c20bc09649d8301c271e0c8bf37354661cf
+Merge: 91d2756 3524882
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Thu Mar 24 13:50:20 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 91d27561ad015e47b4f69d850bc40634efecdad4
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Thu Mar 24 13:48:21 2022 +0000
+
+    Nomnso changes
+
+commit 85c1f6f72701fa46e1028c8363bf3d368089f454
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Thu Mar 24 13:43:04 2022 +0000
+
+    changed page 3 so that regression lines work better
+
+commit edbf157ca94fccb5c2d0f58ec80b04390bdb0a36
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Thu Mar 24 13:35:30 2022 +0000
+
+    revise the dashboard page 3 correlation and regression model
+
+commit 352488261c3cb584b0aa1eeebbcc972b38c03f1a
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Thu Mar 24 13:25:54 2022 +0000
+
+    final edits to power bi
+
+commit a85dae10a0eb86874314bb43c60f9c79858348d3
+Merge: 6b5a678 f2d9968
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 24 13:21:30 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 6b5a678630a6204930ca5206a85564ab93190106
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 24 13:19:32 2022 +0000
+
+    Corrections
+
+commit f2d9968f312019bad4fef4e540d87f34c4417b62
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Thu Mar 24 13:07:15 2022 +0000
+
+    deleted old files
+
+commit 316460e2dc4371a819ef68d4b1270bea404fd5df
+Merge: b9a379b af40bba
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Thu Mar 24 13:04:15 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit af40bba12569eee5513c26a8b8e51ebee3c98d79
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 24 12:59:50 2022 +0000
+
+    Edited README.txt and deleted unnecessary files
+
+commit c0273507f93be9d864ae448ad8558821fa7d7dfd
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 24 09:08:02 2022 +0000
+
+    Modified EDA and README.txt
+
+commit b9a379b2728d1092e69a9989f261a847bf4af11d
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Wed Mar 23 16:55:31 2022 +0000
+
+    Simplification completed (Power Bi left open and unsaved on last commit)
+
+commit c79c81c1d3eb7bda44228d825510e071b5f4b88a
+Merge: 110d275 b23e56f
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Wed Mar 23 16:54:35 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 110d27538956bfdb7b1ec7b6dd07a279bb0eaabe
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Wed Mar 23 16:54:20 2022 +0000
+
+    Simplification of 4th page and added text to explain the green dots on the second page
+
+commit b23e56fb4ddebbb01e2d26dc09bd0fbddf932520
+Merge: a898d80 cf57769
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Wed Mar 23 16:52:38 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit a898d807790bba597e759a2a11c979712ed5442d
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Wed Mar 23 16:52:25 2022 +0000
+
+    Update to the features for the correlation
+
+commit f0de2bb7119078f15258eb6ff38373c2c050f0bc
+Merge: ed35d77 33995f4
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Wed Mar 23 16:35:00 2022 +0000
+
+    update Correlation_features_pass_label
+
+commit cf5776988bc018cee08b12a1c752bd01cfb614fc
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Wed Mar 23 15:39:11 2022 +0000
+
+    Updated README.txt
+
+commit 05bc7733c3ba42cc9e5bf41bb376a0a6b07e4d24
+Merge: b111b15 201f462
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Wed Mar 23 15:32:21 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit b111b15887fc5f62903f2c34caee56d35dc37e31
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Wed Mar 23 15:31:34 2022 +0000
+
+    move the id_student_all to munge folder
+
+commit 201f4622a79469549146d52b85a096e505575067
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Wed Mar 23 15:27:20 2022 +0000
+
+    recovered Engagement over time.R
+
+commit 1803a85718772b871c4ff6397188f8a12871269b
+Merge: 2a3edab ef9bdca
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Wed Mar 23 15:25:26 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 2a3edabf6d6f5fd026ebc592c2f3b0e3ece8a6d2
+Merge: d73f33e 233c738
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Wed Mar 23 15:24:36 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit ef9bdca2da61e4fc51276dfc95d15b3110449cae
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Wed Mar 23 15:24:28 2022 +0000
+
+    Finished literature review and started the structured abstract
+
+commit d73f33eae2b0525596678b9024d4c627a3ff52a6
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Wed Mar 23 15:24:28 2022 +0000
+
+    changed axis of top right graph on page two to No. of clicks ancalculates by sum of clicks now
+
+commit 18520cdf05f47f229750e9a5c3f3f713d959d839
+Merge: f24f656 233c738
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Wed Mar 23 15:22:28 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 233c7387ebd7c5ba9b0c87911c2af8f3237911cf
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Wed Mar 23 15:21:26 2022 +0000
+
+    Updated README.txt
+
+commit f24f656d073acb615edcaf243e7080f31fc0ca06
+Merge: 0d7ed64 f5ea76f
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Wed Mar 23 15:21:11 2022 +0000
+
+    merge
+
+commit 142ef41a3432c94f1745ce104588bd0ce15f7b20
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Wed Mar 23 15:13:31 2022 +0000
+
+    Created EDA script for the entire project
+
+commit ed35d7794dc9ca73250af8bc0c97aadc46d1b631
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Wed Mar 23 15:10:54 2022 +0000
+
+    add final ROC Gradient Boosted, Random forest, Tree ensemble and Decision Tree
+
+commit 33995f4f2b5a989b566d93975ac1407f3541f547
+Merge: d2ddac8 aafbc26
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Wed Mar 23 14:51:13 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit d2ddac8ce87616078e0179a4e958899fa3c2b972
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Wed Mar 23 14:49:30 2022 +0000
+
+    Some code modifications
+
+commit aafbc26c90a28ffc1386e1961565a3f3c59c78a9
+Merge: 572fd71 8c2dd03
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Wed Mar 23 14:36:31 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 572fd717cab1e68d7d4c1c90bc84c28f85d87047
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Wed Mar 23 14:36:17 2022 +0000
+
+    changed to pie chart on page 1
+
+commit 8c2dd03a782a7b19dc29ddf44753793b91db0dda
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Wed Mar 23 14:26:17 2022 +0000
+
+    add final workflow with ROC curve and deployment
+
+commit 51c15618f91a00599681ae5601c373a9facb0273
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Wed Mar 23 14:21:50 2022 +0000
+
+    print final workflow Final_classifier_workflow_KNIME
+
+commit 77f82d6f1976066e09c8e144024451f08716afc7
+Merge: 0de3999 48161fa
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Wed Mar 23 13:53:42 2022 +0000
+
+    revise cluster and remove blank space on page 3
+
+commit 0de3999ad51d33710eb35eaf54a193d130f09b7f
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Wed Mar 23 13:53:02 2022 +0000
+
+    revise cluster and remove blank space on page 3
+
+commit 48161fa25133abf59518f31c60f250f88a3aaff7
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Wed Mar 23 12:16:04 2022 +0000
+
+    Added title to x axis of Activity Type and Number of Clicks
+
+commit d21482d74eadea116952c715cf9c130ebbdf011f
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 22 17:14:17 2022 +0000
+
+    re-run cluster based on number of clicks and grade in order to remove blanks from Carter's edited file, add images page 1 and page 2
+
+commit 2036a320395e6685a475dcb44f2f942f472d30d7
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 22 16:51:29 2022 +0000
+
+    update the overall workflow, combined all models and validation scores
+
+commit 810bbf6a4b5483ec8c132c3b90d0663a7a968803
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Tue Mar 22 16:49:45 2022 +0000
+
+    moved graph by small amount
+
+commit 121da2d753c5e95514e223962c82689b070eb3e2
+Merge: 7c2ea5a 56f19c4
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Tue Mar 22 16:45:49 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 7c2ea5af924443e4c183ddb7acde503162b470f8
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Tue Mar 22 16:45:37 2022 +0000
+
+    Updating the dashboard so that the titles are more accurate and interactions work
+
+commit 56f19c49b69c337e122d534a45ba56461549c53c
+Merge: a7adfe9 7051138
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Tue Mar 22 16:02:17 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit a7adfe97a7d24fa63fbf80d80445c247447301ae
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Tue Mar 22 16:02:11 2022 +0000
+
+    Created README.txt for the project
+
+commit 70511385e2c14b8023cf6381622872b80950894d
+Merge: 04a9f80 e2f2551
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 22 15:10:41 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 04a9f80b754009ee50f853fb2d9e83a0dcdbc867
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 22 15:10:29 2022 +0000
+
+    add 84.69% tree ensemble confusion matrix
+
+commit e2f2551d51bd4420482850c66789c603a94858b6
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Tue Mar 22 14:58:58 2022 +0000
+
+    update and recreate the df_allmodule_activity_click and df_allmodule_activity_num
+
+commit e4bcbddf7d1e81cf6f0b1a67cd95d4bd31d25aaf
+Merge: dc7b4de a31436a
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Tue Mar 22 14:53:05 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit a31436a3c7a4e00ce82ef871332456f38a96d953
+Merge: 50931ec 0d0d124
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 22 14:11:15 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 50931ec3339a452ec802497c75374666ef840f18
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 22 14:11:02 2022 +0000
+
+    add Correlation_features_pass_label
+
+commit 0d0d12426ac1ff364c292947dd66dc72e787e333
+Merge: 096f7c8 8d0af41
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Tue Mar 22 14:02:07 2022 +0000
+
+    merge change accepted
+
+commit 096f7c87a43f98391795d668bbcbcf6908457c46
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Tue Mar 22 14:00:37 2022 +0000
+
+    changed source location
+
+commit 8d0af4121bcddd627488e0ab76cc15500598ac76
+Merge: 7c8e041 951eacc
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Tue Mar 22 13:51:59 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 7c8e0417409cec7daf8e7f4dac247562bcfba650
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Tue Mar 22 13:51:50 2022 +0000
+
+    Made a few corrections
+
+commit 951eacc706b81485eb99802baba2fd986b207f4f
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 22 13:49:57 2022 +0000
+
+    revise dashboard visualisation
+
+commit dc7b4de91193ca1f0b1fe8e92bfddf82d59b2132
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Tue Mar 22 13:48:01 2022 +0000
+
+     move the activity_type into the src folder
+
+commit 7d5dbb8dd5297262b467e0324061a3cf80d659ef
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 22 13:46:44 2022 +0000
+
+    predicting 2 class with 84.66%_Random Forest_Confusion Matrix
+
+commit 04d20a39bb54bef45d6b2ab639da474186579633
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 22 13:43:57 2022 +0000
+
+    predicting 2 class with 84.66%_Random Forest_Confusion Matrix
+
+commit e51166a1a6eb41f8bd92d3ba50be4b6cb9609425
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Tue Mar 22 13:16:46 2022 +0000
+
+    move module_engagement.r into munge folder
+
+commit 324cbbeac1709737bb2c90a7321956a5a7f0cca1
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 22 12:35:35 2022 +0000
+
+    add and revise final dashboard group 7
+
+commit 6fd29ff82d73fbf6bd0e7eb8d36f4ac0b8af4153
+Merge: 47761ec 42bdd82
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 22 12:31:31 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 47761ecf36b132e9f8a0f0e9a0425824421704fe
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 22 12:30:23 2022 +0000
+
+    Add primary data structure and integration in EDA
+
+commit 42bdd82c3a25ea306ec7b354eb981e67245430cf
+Merge: 8676b42 f5ea76f
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Tue Mar 22 11:25:34 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 8676b42ec8ecfecdb9ab48e60e85d68e20a6ed81
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Tue Mar 22 11:25:24 2022 +0000
+
+    Updated R code and global.dcf
+
+commit f5ea76f981b9d06db7bcd6cdcbda3a2c6f815438
+Merge: b2d315f b1930bd
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Mon Mar 21 17:23:14 2022 +0000
+
+    oMerge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit b2d315fa4f49d1e7272bcb2159787ffaab5d8235
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Mon Mar 21 17:21:48 2022 +0000
+
+    add days column and update the ROC Curve of random forest, decision tree, gradient boosted, tree ensemble
+
+commit b1930bd5188649764cfc83a601dc1c281601b022
+Merge: 6fa2a75 dfcb88c
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Mon Mar 21 16:33:57 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit dfcb88c15eca1dbe4e21f298eb60125cc73e2c6e
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Mon Mar 21 16:12:01 2022 +0000
+
+    ROC Curve of random forest, decision tree, gradient boosted, tree ensemble
+
+commit 6fa2a7535d95ebf654aa16c2bc630732a7f05ed0
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Mon Mar 21 16:06:30 2022 +0000
+
+    Update id_student_all.R
+
+commit 74ee0c537dcc09dbfa9fbcf2c0ef3f9bad3e3cda
+Merge: eeaea21 472c835
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Mon Mar 21 15:48:32 2022 +0000
+
+    Predicting student pass or fail through classification
+
+commit eeaea21bd70f26c6418623673b3da2082582b5af
+Merge: 900d813 49e0e74
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Mon Mar 21 15:45:06 2022 +0000
+
+    merge
+
+commit 472c8351f1a613f46e9298d4bc5a0483f8014357
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Mon Mar 21 15:36:19 2022 +0000
+
+    slicer and relationships for second page
+
+commit b7b22a135db085e6ee2be851e7cc83aeb966bf21
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Mon Mar 21 14:32:36 2022 +0000
+
+    Calculated days the student was active with Yingxi
+
+commit 7fe1ec22157ac33ed9be88d644ca5169515503ca
+Merge: e4eac9b cf0620a
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Mon Mar 21 14:00:39 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit e4eac9befaf38f50915ce7e33e1b9b93fddd6dbb
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Mon Mar 21 14:00:26 2022 +0000
+
+    Added id_pres to mean_num_clicks_per_credits.csv
+
+commit cf0620a520d6372592cea20e587da0bf853aef35
+Merge: c2ccbab 49e0e74
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Mon Mar 21 13:56:23 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit c2ccbabc8895d0541e102360e6783b0720d855b4
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Mon Mar 21 13:56:19 2022 +0000
+
+    create id_student_column.csv
+
+commit 900d8135631165b349b5d97ed1e13481b9866bfe
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Mon Mar 21 13:35:51 2022 +0000
+
+    Start doing classification predicting student pass fail using KNIME
+
+commit fb3e104e7286121563ecc9003e80b1284418933e
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Mon Mar 21 13:28:12 2022 +0000
+
+    Start doing classification predicting student pass fail using KNIME
+
+commit 49e0e746cb5815f7d700340b702f0283216901ae
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Mon Mar 21 12:45:15 2022 +0000
+
+    changes to Engagement to include id_pres
+
+commit 151d2eecb283df9dc1b3537ec0d316e77cd53ed6
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Mon Mar 21 12:21:49 2022 +0000
+
+    Added titles and fixed data sources
+
+commit 08364d9b1d78c786dfbe6c7e841d1ea8f2e12689
+Merge: 8d1bccf 4a66be1
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Mon Mar 21 11:34:02 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 8d1bccfd944bc4ac1d46f710676573927a4f6237
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Mon Mar 21 11:33:47 2022 +0000
+
+    Changes to Power Bi
+
+commit 4a66be18bf5c3f794b80ff161a1228449bded681
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Mon Mar 21 11:21:38 2022 +0000
+
+    Create Mean click num of Distinction student.R
+
+commit 0d7ed64831cd3d49b80543dfd7eedb3c867118a7
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Sun Mar 20 19:57:07 2022 +0000
+
+    Corrected the engagement over time survival dataset
+
+commit 558c0f828e3e90397b7b4d3a0a59f0450af41e0f
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Sun Mar 20 17:56:46 2022 +0000
+
+    Added Assignment dates to timeline of clicks added titles to some work
+    - Added some DAX code to add pres_specific columns
+    - changed the relationships between some datasets so that they interact
+      properly
+
+commit b56a1536e55f58f47961faae5e42c5602512835c
+Merge: d53efb5 7d3cd2d
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Sun Mar 20 15:57:48 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit d53efb56aeb3d5147baa12484487279c7b7f41f7
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Sun Mar 20 15:57:30 2022 +0000
+
+    added a pres_specific column to the PCA dataframe
+
+commit 7d3cd2d96652f65eb8ba34cd4815164d8950330d
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Sun Mar 20 15:53:07 2022 +0000
+
+    Deleted earlier EDA reports
+
+commit 49c1955f4bc707a64a92441504a8d42da4190f97
+Merge: e477bfd d833d0f
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Sun Mar 20 15:50:40 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit e477bfd85f1336ae0f34144e9e2a7da349c426c7
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Sun Mar 20 15:47:46 2022 +0000
+
+    Script for pres_specific assessment date and more libraries
+
+commit d833d0fd12e1f5704ed48ccb80a44edc05316685
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Sun Mar 20 15:44:41 2022 +0000
+
+    update the dashboard page 2
+
+commit 459a43f1280bb0f5d8f812c6c356ccaa4dac44d3
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Sun Mar 20 15:29:29 2022 +0000
+
+    Added more libraries to global.dcf
+
+commit ba171ca14a760bb56cde16fb6c01817748f31f18
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Sun Mar 20 15:04:33 2022 +0000
+
+    Activity of the distinction student and num click trends ~ page  dashboard
+
+commit d20088379aa97358513bc94f76d62f3194ebb7e1
+Merge: 09d2db3 9e2fe76
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Sun Mar 20 14:03:22 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 09d2db349ea69b740542a7e58d0ff739cdb914c3
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Sun Mar 20 14:03:12 2022 +0000
+
+    Updated global.dcf libraries
+
+commit 9e2fe76825e70bccbe4d5a7845c018f113d311c3
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Sun Mar 20 13:14:44 2022 +0000
+
+    update the activity_click&activity_num dataset
+
+commit e606cf2aa0617cc3836fa12f78bbb17552e4bd51
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Fri Mar 18 20:21:07 2022 +0000
+
+    markdown file for id_pres to pres_specific analysis
+
+commit 7b03d1e40427634a022cb903d9331e0d99412c5b
+Merge: b547a4d a267590
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Fri Mar 18 16:04:31 2022 +0000
+
+    o
+    oMerge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit b547a4d8d89af7860111668ec61583d6df28d298
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Fri Mar 18 16:04:19 2022 +0000
+
+    add new dataset from Vishes and Ninji and visualize in additional pages
+
+commit a26759052488b1be7f681af78a2e129ce6b795fa
+Merge: eb51bef d756297
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Fri Mar 18 15:15:20 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit eb51befb9aef7bcfdb7b517c6e537c43f6563241
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Fri Mar 18 15:14:47 2022 +0000
+
+    Deleted some code of survival analysis not needed
+
+commit d756297e0ae2e25b68ea5ae82863ef38236675f8
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Fri Mar 18 14:52:45 2022 +0000
+
+    Create activity_num_passPrecentage.r
+
+commit ca43b7a714f7a1bfff577afd4aaf5f0abae3b061
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Fri Mar 18 14:51:18 2022 +0000
+
+    Update activity_click_passPrecentage.r
+
+commit 5e580b1e7be301e3d9a26535088310777431817b
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Fri Mar 18 14:30:12 2022 +0000
+
+    compare 3 and 5 clusters, change to 5 clusters that are more reflecting the students
+
+commit 78db3a60efc25fe55f49ee37bdbad37ef124de6a
+Merge: f293f67 52ee875
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Fri Mar 18 14:15:07 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit f293f678ae3d06424eb6d36070daa9d5fa61d56c
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Fri Mar 18 14:14:53 2022 +0000
+
+    Carter changed and made a mistake
+
+commit 52ee875004b598b6fcb91844764d67b9afd1c0cb
+Merge: 5d9dd82 bdec0c1
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Fri Mar 18 13:59:47 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 5d9dd829bf052e74d42091f05a8380512d877873
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Fri Mar 18 13:59:34 2022 +0000
+
+    Started the survival analysis and created main plot
+
+commit bdec0c1e868efaf9178f1ae3c5361fcc6ae6bd0a
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Fri Mar 18 13:44:47 2022 +0000
+
+    Revert "update PCA, cluster and insert the final score slicer"
+    
+    This reverts commit f3cca2810f1a1973a19ad6705ebf30c976383920.
+
+commit fe8f3b2c417b9d5cce6ec0d9de66d872a9bc03e3
+Merge: f3cca28 d6b34ff
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Fri Mar 18 13:06:59 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit f3cca2810f1a1973a19ad6705ebf30c976383920
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Fri Mar 18 13:00:15 2022 +0000
+
+    update PCA, cluster and insert the final score slicer
+
+commit d6b34ff6a5b28adfddc172dcfb0cc0a277474533
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Fri Mar 18 12:08:25 2022 +0000
+
+    Update activity_click_passPrecentage.r
+
+commit 10363881a7bfb785f9ab19bdafbf3092ed37c046
+Merge: 6494547 a38f271
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Fri Mar 18 09:08:37 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 6494547593fd353d6b46d3d9fc6a88bcf520f875
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Fri Mar 18 09:08:33 2022 +0000
+
+    Create module_engagemnet.R
+
+commit a38f27108b10b35b4fc9129a05ecc326b65180dd
+Author: Vishesh Gupta <visheshtechie@gmail.com>
+Date:   Fri Mar 18 08:05:11 2022 +0000
+
+    Update Rewarding_Activities.R
+    
+    Integrated module and presentation columns for filtering in PowerBI
+
+commit e91a4a64c0fbc065c43c5f572933592aec59adc3
+Author: Vishesh Gupta <visheshtechie@gmail.com>
+Date:   Fri Mar 18 07:26:03 2022 +0000
+
+    Update Rewarding_Activities.R
+
+commit 51c25943c010456b5b025134b3d4c0ae273ede96
+Author: Vishesh Gupta <visheshtechie@gmail.com>
+Date:   Fri Mar 18 07:24:54 2022 +0000
+
+    Create Rewarding_Activities.R
+
+commit 03cc6b3fa29a5ab381cec1ba605f0aca6f50cc48
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Fri Mar 18 03:39:15 2022 +0000
+
+    output id_pres to pres_specific count with visualisation
+
+commit b43316e80251782d4985624bbdef3e2a51527ea4
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Fri Mar 18 03:36:09 2022 +0000
+
+    Added r script for id_pres to pres_specific count
+
+commit eb52d9f45810ea60898ac330b4f7fb7e784e429b
+Merge: 6a6a86b 70812a3
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Thu Mar 17 23:18:46 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 70812a3a865ed31516c2c129541c7ceaf61e0c5e
+Merge: 1821860 edb1207
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 16:25:45 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 18218604b71f7f8b1cf8675fd82cd4bf225e5146
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 16:22:59 2022 +0000
+
+    made a few changes to the r code
+
+commit edb1207d9da6af01b555ef600e8d2fa0fb562da3
+Merge: 9bfd8cc 7ccf208
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Thu Mar 17 16:22:37 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 9bfd8cca23fc25022dedf57901572da3089c6a94
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Thu Mar 17 16:19:46 2022 +0000
+
+    added the pass fail stuff to the end of csv
+
+commit 7ccf2082fde35758884debbc334047890f3ac80e
+Merge: 12f9ac6 8507161
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Thu Mar 17 16:18:38 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 12f9ac62e792ce8b09e650a1afd6270059986a2d
+Merge: f0dc3cf d8ca886
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Thu Mar 17 16:16:54 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 8507161a5d7caffdc83770da1d17e11d22333945
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Thu Mar 17 16:16:50 2022 +0000
+
+    visualized PCA and cluster
+
+commit f0dc3cf0227f1d8483cf81d77b660b5412d0f0f4
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Thu Mar 17 16:16:14 2022 +0000
+
+    New engagement over time per module data (includes percentage number of cklicks)
+
+commit d8ca886d41af3482c7114bb8a624717fa4f0112f
+Merge: 80ac78e 6ff1d97
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Thu Mar 17 16:14:04 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 80ac78e51f0ca3c05ed96b9eb3d78e5dd016956d
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Thu Mar 17 16:10:26 2022 +0000
+
+    visualized cluster based on sum clicks and activity
+
+commit 2284e4a5332b5396fdef5e1796820e483fb67d07
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 16:07:45 2022 +0000
+
+    modified code in r notebook
+
+commit 7bff57463a994f71b73bd14c7f65b4e1ea617830
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 16:04:40 2022 +0000
+
+    Update Modules_vs_Attainment_Group8.R
+
+commit aa0f03db283a0e1c9c52feccedbec0cf538e8fe5
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 16:02:09 2022 +0000
+
+    modified report script
+
+commit 6ff1d97c14fd919fd003f869b4ab8762acd07fed
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Thu Mar 17 15:57:49 2022 +0000
+
+    created a reduced pca
+
+commit e1b0c632fbaa1c5213b8064384eed1aacf11a098
+Merge: 2ee4fe9 f548e1d
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Thu Mar 17 15:49:37 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 2ee4fe91b41c6cc6b2db02b055a71a71dc664952
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Thu Mar 17 15:49:03 2022 +0000
+
+    Created the engagement over time per module dataset
+
+commit f548e1de77ab1821490e8c917a936b9d8679da70
+Merge: 33c4028 f7df537
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Thu Mar 17 15:35:16 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 33c402877d2b61f641541748cb076c97ea22a1eb
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Thu Mar 17 15:34:34 2022 +0000
+
+    PCA analysis on activity
+
+commit cdce53d79d97b21aec96ed1e89df77812dcd37d6
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 15:09:20 2022 +0000
+
+    data profiling report r script
+
+commit 625b400470c31802ae543c944b461e1633953516
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 15:08:16 2022 +0000
+
+    courses data profiling report
+
+commit 346302a640b3b9b5d9c89fc524773baa3ce0ed75
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 15:07:41 2022 +0000
+
+    student vle data profiling report
+
+commit f282a9e6b9df215dfab0a633a6fd21ad8e2587fb
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 15:06:53 2022 +0000
+
+    student registration data profiling report
+
+commit 6fe4b87e45c2cd2b8818daf3f461f7b2c7cc0626
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 15:06:08 2022 +0000
+
+    assessment data profiling report
+
+commit 4b5e31e41afe29b6d337aee6b458ffc9b1a63e2e
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 15:05:16 2022 +0000
+
+    student assessment data profiling report
+
+commit 186d9d0f606cd3d570b9194bc633025902aab43e
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 15:02:32 2022 +0000
+
+    modified student information data profiling report
+
+commit f7df5372e32ad90e3cd7b910f7a1f86e257bd261
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 14:59:35 2022 +0000
+
+    vle data profiling report
+
+commit af9fb0de4f406c88c93d67a3358f05b276108d0e
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 14:53:29 2022 +0000
+
+    student data profiling report
+
+commit 73d35744e8ea495d0d91f7c426b37692b5f22f4b
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 14:51:44 2022 +0000
+
+    module vs attainment html output
+
+commit b4c4fb98b3265276dcfb6d60ba4d264b2d9e009d
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 14:49:37 2022 +0000
+
+    module vs attainment notebook
+
+commit eac4aa43ae7fcd2797356b9890f5dbc114315ad1
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 14:47:58 2022 +0000
+
+    module vs attainment r script
+
+commit 79d6cfad0789dffdea360fb21cbd0aa7ea1ecd92
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Thu Mar 17 14:45:10 2022 +0000
+
+    module vs attainment EDA folder
+
+commit 6a6a86bd7ac2a6920490f3eccc45315080c08bcb
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Thu Mar 17 14:30:56 2022 +0000
+
+    Linear regression models
+
+commit 15b22b0a41797841f63d0f1d213b3dd2a3d4eb66
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Thu Mar 17 13:10:30 2022 +0000
+
+    Creating the engagement over time data set
+
+commit fc7a85a6ffc89af45c39983e37ff35bca4640945
+Merge: 2f13523 9614a63
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Thu Mar 17 12:35:35 2022 +0000
+
+    initial try in creating activity engagement dataset
+
+commit 2f135234c2e9367882d1d18057acbdb79f06d227
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Thu Mar 17 12:32:32 2022 +0000
+
+    initail try in creating activity dataset
+
+commit 9614a6392e6abe440ff7373400c5dbb7764b6fa1
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Thu Mar 17 12:01:27 2022 +0000
+
+    added in read.csv steps and grouped by id pres
+
+commit 137e88f0b6fe43ba1dfe317ee69c92a316233162
+Merge: 67d9e00 db0082b
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Thu Mar 17 11:35:15 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 67d9e00f9339eab07ead843f7ff35c24a0805f4f
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Thu Mar 17 11:33:59 2022 +0000
+
+    plot of engagement with activity type
+
+commit 1e0b6b33634eb5453ac0be38ea1998cfe3a0f7d8
+Merge: c71c841 db0082b
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Thu Mar 17 11:25:13 2022 +0000
+
+    manual merge
+
+commit c71c8418ad3bc7e1cffddcaa7dd592fba749d285
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Thu Mar 17 11:24:32 2022 +0000
+
+    small changes made
+
+commit db0082b7dc7eeb4259cecc8b7c03846302ee2a68
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Thu Mar 17 01:47:58 2022 +0000
+
+    Create activity_type.R
+
+commit 41128a8aac62200ff49e8cfde7815d1c06930e77
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Wed Mar 16 19:52:41 2022 +0000
+
+    add an image file for the plot of correlation and clustering
+
+commit 69c96248f2b0d8262b5fc1dad3cb2ea60dbfecfd
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Wed Mar 16 19:50:21 2022 +0000
+
+    add a report of correlation, regression model and clustering
+
+commit 244897eac9e42739d2f8053a895887f995b9ddbe
+Merge: 09b296a 07cca6d
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Wed Mar 16 19:16:56 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8 update dashboard and insert
+    EDA code the commit.
+
+commit 09b296ae9800d24a840153bea2355042fe8978c0
+Merge: 98c374a 473295a
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Wed Mar 16 19:13:53 2022 +0000
+
+    add EDA python code to customise several dataframes
+
+commit 07cca6db4fa34c2bd4e2aeb52199ef49bde8245a
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Wed Mar 16 17:31:52 2022 +0000
+
+    Initial data preparation for engagement with specific activity types
+
+commit 98c374a28bc0f5a0bca5a7c478591b070ea153bd
+Merge: ce055a3 0edea0c
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Wed Mar 16 17:05:20 2022 +0000
+
+    update the EDA dashboard and EDA code
+
+commit 473295a5fc8acc3b13d0427671df8fa28b975df7
+Merge: 1a874c7 9799372
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Wed Mar 16 16:48:07 2022 +0000
+
+    Merge branch 'main' of https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 1a874c71a51d9b5356293fa0426f8f565a6f621a
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Wed Mar 16 16:48:02 2022 +0000
+
+    Change folder location
+
+commit 9799372e6f8ba86ece055a6a993591593ea04b7b
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Wed Mar 16 14:41:38 2022 +0000
+
+    changed the student info file (excluded the filtering)
+
+commit af11b9dc957054ad751bb14ef2f05010d903c1fe
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Wed Mar 16 14:06:12 2022 +0000
+
+    changed students id column to numeric
+
+commit ce055a3fe68c2ad3e03738f1e985182e36ee9c58
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Wed Mar 16 14:01:23 2022 +0000
+
+    insert EDA file to prepare dataset for visualisation
+
+commit 0edea0cd792d28c6baf003eea8d6a7248ab12c44
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Wed Mar 16 13:44:08 2022 +0000
+
+    final csv with final grades and number of clicks per day
+
+commit 22fbef46d56eb4ac6b1a2a196134057179a666e6
+Merge: 84bdb53 68c2c44
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Wed Mar 16 12:11:41 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 84bdb53ac0df47613f6365345f7989868a029df0
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Wed Mar 16 12:10:31 2022 +0000
+
+    deleting unsued data
+
+commit 8146d34fbc891a8bf39c48e97c8776d43e478ec5
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Wed Mar 16 12:08:51 2022 +0000
+
+    Final grades and number of clicks per day calculated
+
+commit 68c2c44cc661031b4cf2ab52fe0e3bb3cfac841f
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Wed Mar 16 11:51:47 2022 +0000
+
+    Update credits.r
+
+commit ba50bceba57b28d893b26f936143e9c1f97292eb
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Wed Mar 16 11:46:50 2022 +0000
+
+    Credits numbers with final result
+
+commit 635f9799cdc527053882f90a868ee520f6f5baf0
+Merge: 4fb545f ac79d93
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Wed Mar 16 11:05:48 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 4fb545f8039aaa35e3cac32690b6dcae274a5a12
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Wed Mar 16 11:04:40 2022 +0000
+
+    some progress on consistency vs final score
+
+commit ac79d93cdb54e999ab704fbf29d49662397cbfe8
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Tue Mar 15 23:05:57 2022 +0000
+
+    Added more libraries to global.dcf
+
+commit 70eaa44f489d4adb44a1980235362902b9423ca9
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Tue Mar 15 22:50:14 2022 +0000
+
+    Module vs Attainment html file
+
+commit b53c7270ccc1ebb73ef90ce35043b4e7f6a8a6db
+Author: NomnsoE <cu_nomnso@yahoo.com>
+Date:   Tue Mar 15 22:48:51 2022 +0000
+
+    Modules vs attainment data analysis R Notebook
+
+commit 6a14f4636ed151f528a8a580073364bd5d9eddaf
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Tue Mar 15 22:01:39 2022 +0000
+
+    removed old version of day2_munge.R
+
+commit e3196f088e1a209db0ba311a146abd9b69f74d87
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Tue Mar 15 22:00:18 2022 +0000
+
+    calculated average clicks per day
+
+commit 25956ff618478658995cd0d8f86853c539644c0f
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Tue Mar 15 21:02:25 2022 +0000
+
+    grouping by student id and code presentation
+
+commit 1edb42ce7413e1de4c1c0050923a846151a5ae9f
+Author: Iro Chalastani Patsioura <irrrooo@gmail.com>
+Date:   Tue Mar 15 17:46:13 2022 +0000
+
+    first steps in finding consistency vs final score
+
+commit e10055db37bf2fc4837776844bbd2a967956551d
+Merge: 15600ad e8858ad
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 15 17:35:57 2022 +0000
+
+    Merge https://github.com/NewcastleDataScience/CSC8633_202122_Group8
+
+commit 15600ad266a917f2040ab8d8505318b5ffca822a
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 15 17:30:53 2022 +0000
+
+    add explain student performance based on their assessment before exam
+
+commit 523c0ba90ec73ecb9996c30c59cd8af10a8a329f
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 15 17:25:50 2022 +0000
+
+    add explain student performance based on their assessment before exam
+
+commit e8858ad9b64a18ceec774d20b333385f5d489a1e
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Tue Mar 15 17:05:00 2022 +0000
+
+    Added comments to assessment_pre_engagement.R
+
+commit 96be9d74f0a28f313ba560aa266fd8feaca5b37f
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 15 16:39:58 2022 +0000
+
+    update the Click Engagement and Score.png
+
+commit c036874a221b82fe2aa330e6ba0ff803bc564c6a
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 15 16:37:13 2022 +0000
+
+    update the Click Engagement and Score.png
+
+commit f567da9a8d9180eb3e084469eee1f95ab88a892a
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Tue Mar 15 16:31:13 2022 +0000
+
+    Student engagement in week lead up to exam calculated
+
+commit 0ad440fbdbfbde31b38f0cefdb26c72aba9a6434
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 15 16:29:57 2022 +0000
+
+    Correlation and model of engagement and score ~ Graphical analysis report
+
+commit 4229ebab617554ad36bbac52f60b070d92cda6f3
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 15 16:17:21 2022 +0000
+
+    Correlation and model of engagement and score ~ Graphical analysis report
+
+commit 9dd1cfb8648ecc31615093b86a3972872443519d
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 15 16:15:49 2022 +0000
+
+    Correlation and model of engagement and score ~ Graphical analysis report
+
+commit 6ba46095a02ca63bb13bb871d1be2c54171005d4
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 15 16:11:13 2022 +0000
+
+    Correlation and model of engagement and score ~ Graphical analysis report
+
+commit 5b8fe5bfe9b6061bcda0cfd34e328267497631c2
+Author: Harrypatria <46651564+Harrypatria@users.noreply.github.com>
+Date:   Tue Mar 15 11:07:04 2022 +0000
+
+    Exploratory data analysis ~ data flow & architecture using power BI
+
+commit 6e4a6fab801a1dcabb0c3ff6fa76006ea63df87f
+Author: YingxiClaire <91340339+YingxiClaire@users.noreply.github.com>
+Date:   Tue Mar 15 10:48:23 2022 +0000
+
+    Create project
+
+commit 77aae83b4f95c3254cf9852f3016632a02dc0f60
+Author: Carter Levy <b7033977@ncl.ac.uk>
+Date:   Mon Mar 14 15:33:12 2022 +0000
+
+    Small demo change
+
+commit 5d9c6826004d6669b5006f0ebd7a08687db697cf
+Author: Osman <osmanakbulut.59@gmail.com>
+Date:   Mon Mar 14 14:53:11 2022 +0000
+
+    Initial commit

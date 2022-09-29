@@ -1,0 +1,114 @@
+---
+title: "Number of Students per Code-Specific Presentation"
+author: Chinomnso Ekwedike
+output: html_notebook
+---
+
+This analysis computes the number of `id_pres` associated with each `pres_specific`.
+
+Load the necessary libraries.
+
+```{r library, echo=TRUE}
+suppressPackageStartupMessages(library(readr))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(ggvis))
+suppressPackageStartupMessages(library(knitr))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(treemapify))
+```
+
+
+Load the data set.
+```{r data, echo=TRUE}
+student_data = read_csv("data/Student_data.csv", show_col_types = FALSE)
+
+```
+
+
+
+Simple exploratory data analysis (EDA) 
+
+```{r column_names, echo=TRUE}
+colnames(student_data)
+```
+
+
+```{r dimension, echo=TRUE}
+dim(student_data)
+```
+
+
+Compute the number of `id_pres` associated with each `pres_specific` 
+
+
+Retrieve the necessary columns and check the new data frame.
+```{r pres_columns, echo=TRUE}
+# retrieve the columns
+new_st_data = student_data %>% select(pres_specific, id_pres)
+
+# check the data subset
+n_row = nrow(new_st_data)
+n_column = ncol(new_st_data)
+missing = any(is.na(new_st_data))
+
+# display the outputs on separate lines
+cat(paste("Rows: ", n_row, "\nColumns: ", n_column, "\nMissing Rows: ", missing))
+```
+
+
+Count the number of students and convert the table to a data frame.
+```{r count, echo=TRUE}
+# convert table to data frame and rename columns
+st_count = as.data.frame(table(new_st_data$pres_specific)) %>% rename(pres_specific = Var1, num_of_students = Freq)
+
+# display the data frame
+kable(st_count)
+```
+
+
+Compute and Include the percentage of students associated with each each code specific presentation.
+
+```{r percentage, echo=TRUE}
+#compute the percentage of each students within each code specific presentation
+new_student_data = st_count %>% mutate(percentage = round(100 * num_of_students / n_row, 1))
+kable(new_student_data)
+#write_csv(new_student_data, "pres_specific_count.csv")
+```
+
+
+Graphical summaries of the analysis.
+
+```{r number, echo=TRUE}
+# plot pres_specific against number of students
+new_student_data %>% ggvis(~pres_specific, ~num_of_students, fill = ~pres_specific) %>% layer_bars() %>% add_axis("x", title = "pres_specific", title_offset = 80, tick_padding = 3, properties = axis_props(labels = list(angle = -70, align = "right", fontSize = 10))) %>% add_axis("y", title = "num_of_students", title_offset = 50)
+```
+
+
+
+Display the percentage in a tree map. The tree map provides an alternative to pie chart given the number of rows (22) in the data frame.
+
+```{r mosaic, fig.width=10, include=FALSE}
+treemap::treemap(new_student_data, index = "pres_specific", vSize = "percentage", type = "index", fontsize.labels = 12, fontcolor.labels = "black", inflate.labels = F, title = "Percentage of Students Treemap", fontsize.title = 25, palette = "Reds")
+```
+
+
+
+```{r tree_mapping, echo=TRUE}
+ggplot(new_student_data, aes(area = percentage, fill = pres_specific, label = paste(pres_specific, "\n", percentage, "%"))) + 
+  geom_treemap() +
+  geom_treemap_text(colour = "white",
+                    place = "centre",
+                    size = 10) + 
+  theme(legend.position = "none")
+```
+
+
+
+
+
+
+
+
+
+
+
